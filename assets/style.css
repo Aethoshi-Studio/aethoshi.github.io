@@ -62,9 +62,8 @@ header.site {
   position: sticky;
   top: 0;
   z-index: 10;
-  background: color-mix(in srgb, var(--bg) 82%, transparent);
-  backdrop-filter: saturate(160%) blur(12px);
-  -webkit-backdrop-filter: saturate(160%) blur(12px);
+  /* Solid, so the logo's blend mode has a background to blend with. */
+  background: var(--bg);
   border-bottom: 1px solid var(--line);
 }
 header.site .wrap {
@@ -86,6 +85,19 @@ header.site .wrap {
   letter-spacing: 0.01em;
 }
 .brand img { width: 34px; height: 34px; }
+.wordmark { text-transform: uppercase; letter-spacing: 0.2em; font-weight: 600; }
+
+/* The brand artwork is black on white. Multiply hides the white on light
+   pages; on dark pages it's inverted to white on black, and screen hides
+   the black. contrast() turns the artwork's off-white background (and its
+   compression noise) into pure white, so no faint box shows. */
+.mark { filter: contrast(1.35); mix-blend-mode: multiply; }
+@media (prefers-color-scheme: dark) {
+  .mark { filter: invert(1) contrast(1.35); mix-blend-mode: screen; }
+}
+
+.hero-logo { justify-self: center; width: min(360px, 80vw); }
+.hero-logo img { width: 100%; display: block; }
 nav { display: flex; gap: 4px; flex-wrap: wrap; }
 nav a {
   color: var(--muted);
@@ -350,6 +362,7 @@ footer.site nav a { font-size: 0.9rem; padding: 4px 10px; }
   .hero .wrap { padding-top: 48px; padding-bottom: 48px; }
   .hero-grid { grid-template-columns: 1fr; gap: 32px; }
   .hero-art { width: min(150px, 42vw); order: -1; justify-self: start; }
+  .hero-logo { width: min(240px, 64vw); order: -1; justify-self: start; }
   main section { padding: 40px 0; }
 }
 @media (max-width: 560px) {

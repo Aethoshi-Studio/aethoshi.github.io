@@ -1,45 +1,52 @@
 # Aethoshi website
 
 The Aethoshi studio site, served by GitHub Pages at
-<https://aethoshi-studio.github.io/>. Plain HTML, one stylesheet and an SVG
-logo, with no build step and no scripts.
+**<https://aethoshi-studio.github.io/aethoshi.github.io/>** (this
+repository, `aethoshi.github.io`, on the `aethoshi-studio` account).
+Plain HTML, one stylesheet and the brand logo, with no build step and no
+scripts.
 
 | Path | What |
 |---|---|
-| `/` (`index.html`) | Home: our apps, About Aethoshi (the name, what we believe) at `/#about`, contact |
+| `/` (`index.html`) | Home: our apps, About Aethoshi (the name, what we believe) at `#about`, contact |
 | `/parchi/` | About the Parchi billing app: features, data, ads, help |
 | `/parchi/privacy/` | Parchi privacy policy (the URL given to Google Play) |
-| `/app-ads.txt` | AdMob seller line. It must be at the **domain root** |
 | `404.html` | Page shown for unknown URLs |
-| `assets/logo.svg` | The Aethoshi logo (sunrise over the horizon); also the favicon |
-| `assets/parchi-icon.png` | Parchi's app icon (from the app's `assets/icon/play_store_512.png`) |
+| `assets/aethoshi-logo.png` | Full logo (star, orbit, AETHOSHI STUDIO), cut from `aethoshi logos/Aethoshi Cosmic Studio Logo.png` |
+| `assets/aethoshi-symbol.png` | The star-and-orbit symbol alone (header, footer, About) |
+| `assets/favicon.png` | Tab icon (the symbol, 64 px) |
+| `assets/parchi-icon.png` | Parchi's app icon |
 | `assets/style.css` | All styles: colour tokens, light and dark mode, phone layout |
 | `.nojekyll` | Tells GitHub Pages to serve the files as they are |
 
+**The logo is black on white.** Anything with `class="mark"` is blended
+into the page. In light mode it multiplies (white disappears); in dark mode
+it's inverted and screened (black disappears). So the one PNG works on both
+themes. If you replace it, keep it black on a white background.
+
 All links are **relative** (`assets/…`, `../assets/…`), so the pages work
-at the domain root, in a sub-folder, or opened straight from disk.
+at any address and when opened straight from disk.
+
+## app-ads.txt is not here
+
+AdMob reads `app-ads.txt` only from the **domain root**,
+`https://aethoshi-studio.github.io/app-ads.txt`. This site lives in a
+sub-folder, so the file is in a separate repository,
+`aethoshi-studio.github.io`, which also forwards the root address to this
+site. See that repository's README.
 
 ## Publishing
 
-1. The repository must be named **`aethoshi-studio.github.io`** under the
-   `aethoshi-studio` account. Only that name is served at the domain
-   root. Any other name, like `aethoshi.github.io`, ends up at
-   `https://aethoshi-studio.github.io/aethoshi.github.io/`, where AdMob
-   can't find `app-ads.txt`. To rename it: Settings → General → Repository
-   name.
-2. Push to `main`, then Settings → Pages → *Deploy from a branch*,
-   `main`, `/ (root)`.
-3. After a minute or two, check:
-   - <https://aethoshi-studio.github.io/>
-   - <https://aethoshi-studio.github.io/parchi/privacy/>
-   - <https://aethoshi-studio.github.io/app-ads.txt>
+Push to `main`. Settings → Pages: *Deploy from a branch*, `main`,
+`/ (root)`. Check:
+
+- <https://aethoshi-studio.github.io/aethoshi.github.io/>
+- <https://aethoshi-studio.github.io/aethoshi.github.io/parchi/privacy/>
 
 ## Updating
 
 - **Privacy policy:** edit `parchi/privacy/index.html` and change the
   "Effective" date at the top.
-- **app-ads.txt:** the line must match the one AdMob shows under
-  Apps → Parchi → app-ads.txt.
 - **Launch:** when Parchi is on Google Play, replace "Coming soon to Google
   Play" on the home and Parchi pages with a link to the store listing.
 - **Preview locally:** open `index.html` in a browser, or run
