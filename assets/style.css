@@ -15,6 +15,8 @@
   --accent: #f2a541;
   --shadow: 0 1px 2px rgba(10, 40, 38, 0.06), 0 8px 24px rgba(10, 40, 38, 0.07);
   --radius: 18px;
+  --glow-core: rgba(255, 255, 255, 0.95);
+  --glow-edge: rgba(0, 113, 108, 0.16);
   color-scheme: light;
 }
 
@@ -33,6 +35,8 @@
     --on-brand: #00211f;
     --accent: #f5b766;
     --shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 10px 30px rgba(0, 0, 0, 0.35);
+    --glow-core: rgba(98, 217, 209, 0.20);
+    --glow-edge: rgba(98, 217, 209, 0.10);
     color-scheme: dark;
   }
 }
@@ -87,17 +91,30 @@ header.site .wrap {
 .brand img { width: 34px; height: 34px; }
 .wordmark { text-transform: uppercase; letter-spacing: 0.2em; font-weight: 600; }
 
-/* The brand artwork is black on white. Multiply hides the white on light
-   pages; on dark pages it's inverted to white on black, and screen hides
-   the black. contrast() turns the artwork's off-white background (and its
-   compression noise) into pure white, so no faint box shows. */
-.mark { filter: contrast(1.35); mix-blend-mode: multiply; }
-@media (prefers-color-scheme: dark) {
-  .mark { filter: invert(1) contrast(1.35); mix-blend-mode: screen; }
+/* Brand artwork: transparent PNGs, a dark one and a white one; <picture>
+   picks the white one in dark mode. */
+picture { display: inline-flex; flex: none; }
+.hero-logo picture { display: block; }
+/* The large logo floats in a soft glow: a star in a clear sky. */
+.hero-logo {
+  position: relative;
+  justify-self: center;
+  width: min(380px, 80vw);
+  padding: 8% 6%;
+  isolation: isolate;
 }
-
-.hero-logo { justify-self: center; width: min(360px, 80vw); }
-.hero-logo img { width: 100%; display: block; }
+.hero-logo::before {
+  content: "";
+  position: absolute;
+  inset: -6% -2%;
+  z-index: -1;
+  border-radius: 50%;
+  background:
+    radial-gradient(closest-side, var(--glow-core), transparent 70%),
+    radial-gradient(closest-side at 62% 40%, var(--glow-edge), transparent 100%);
+  filter: blur(6px);
+}
+.hero-logo img { width: 100%; height: auto; display: block; position: relative; }
 nav { display: flex; gap: 4px; flex-wrap: wrap; }
 nav a {
   color: var(--muted);
@@ -362,7 +379,7 @@ footer.site nav a { font-size: 0.9rem; padding: 4px 10px; }
   .hero .wrap { padding-top: 48px; padding-bottom: 48px; }
   .hero-grid { grid-template-columns: 1fr; gap: 32px; }
   .hero-art { width: min(150px, 42vw); order: -1; justify-self: start; }
-  .hero-logo { width: min(240px, 64vw); order: -1; justify-self: start; }
+  .hero-logo { width: min(260px, 70vw); order: -1; justify-self: center; }
   main section { padding: 40px 0; }
 }
 @media (max-width: 560px) {

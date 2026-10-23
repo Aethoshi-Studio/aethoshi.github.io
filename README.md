@@ -8,21 +8,23 @@ scripts.
 
 | Path | What |
 |---|---|
-| `/` (`index.html`) | Home: our apps, About Aethoshi (the name, what we believe) at `#about`, contact |
+| `/` (`index.html`) | Home: our apps, About Aethoshi (the name: Greek *aether* + Japanese *hoshi*, what we believe) at `#about`, contact |
 | `/parchi/` | About the Parchi billing app: features, data, ads, help |
 | `/parchi/privacy/` | Parchi privacy policy (the URL given to Google Play) |
 | `404.html` | Page shown for unknown URLs |
-| `assets/aethoshi-logo.png` | Full logo (star, orbit, AETHOSHI STUDIO), cut from `aethoshi logos/Aethoshi Cosmic Studio Logo.png` |
-| `assets/aethoshi-symbol.png` | The star-and-orbit symbol alone (header, footer, About) |
-| `assets/favicon.png` | Tab icon (the symbol, 64 px) |
+| `assets/aethoshi-logo.png`, `-light.png` | Full logo (star, orbit, AETHOSHI STUDIO), transparent, in dark ink and in white |
+| `assets/aethoshi-symbol.png`, `-light.png` | The star-and-orbit symbol alone (header, footer, About), dark and white |
+| `assets/favicon.png`, `apple-touch-icon.png` | Tab and home-screen icons: the white symbol on brand teal |
 | `assets/parchi-icon.png` | Parchi's app icon |
 | `assets/style.css` | All styles: colour tokens, light and dark mode, phone layout |
 | `.nojekyll` | Tells GitHub Pages to serve the files as they are |
 
-**The logo is black on white.** Anything with `class="mark"` is blended
-into the page. In light mode it multiplies (white disappears); in dark mode
-it's inverted and screened (black disappears). So the one PNG works on both
-themes. If you replace it, keep it black on a white background.
+**Logos:** each brand image is a `<picture>`. It shows the dark-ink PNG
+on light pages and the white `-light.png` in dark mode. All of them are
+made from `aethoshi logos/Aethoshi Cosmic Studio Logo.png` (black on white)
+by turning the white paper transparent. To remake them after a logo
+change, run the same conversion with Pillow: alpha = ink darkness, white →
+transparent. Then crop the full logo, and the symbol above the wordmark.
 
 All links are **relative** (`assets/…`, `../assets/…`), so the pages work
 at any address and when opened straight from disk.
