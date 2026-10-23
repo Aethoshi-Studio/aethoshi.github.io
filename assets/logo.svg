@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Aethoshi">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#7fe3dc"/>
+      <stop offset="0.55" stop-color="#1a948d"/>
+      <stop offset="1" stop-color="#005a57"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="16" fill="url(#sky)"/>
+  <!-- sunrise: half a sun on the horizon, with rays, in the clear sky (aether) -->
+  <path d="M19 40 A13 13 0 0 1 45 40 Z" fill="#ffffff"/>
+  <g stroke="#ffffff" stroke-width="3.2" stroke-linecap="round">
+    <path d="M32 13.5v5"/>
+    <path d="M17.2 19.6l3.5 3.5"/>
+    <path d="M46.8 19.6l-3.5 3.5"/>
+    <path d="M10.5 32h4.8"/>
+    <path d="M53.5 32h-4.8"/>
+  </g>
+  <path d="M11 40h42" stroke="#ffffff" stroke-width="3.2" stroke-linecap="round"/>
+  <path d="M19 47.5h26" stroke="#ffffff" stroke-opacity="0.55" stroke-width="3.2" stroke-linecap="round"/>
+</svg>

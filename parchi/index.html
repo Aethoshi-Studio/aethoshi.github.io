@@ -5,85 +5,127 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Parchi Billing</title>
   <meta name="description" content="Parchi is a simple billing app for clinics, shops and salons: GST invoices, payments, appointments and reports, with your data kept on your phone.">
-  <link rel="icon" href="/assets/parchi-icon.png">
-  <link rel="stylesheet" href="/assets/style.css">
+  <meta name="theme-color" content="#00716c">
+  <link rel="icon" type="image/svg+xml" href="../assets/logo.svg">
+  <link rel="stylesheet" href="../assets/style.css">
 </head>
 <body>
   <header class="site">
     <div class="wrap">
-      <a class="logo" href="/">Aethoshi</a>
-      <nav>
-        <a href="/">Home</a>
-        <a href="/#about">About</a>
-        <a href="/parchi/" aria-current="page">Parchi</a>
-        <a href="/parchi/privacy/">Privacy</a>
+      <a class="brand" href="../"><img src="../assets/logo.svg" alt="" width="34" height="34">Aethoshi</a>
+      <nav aria-label="Main">
+        <a href="../">Home</a>
+        <a href="../#about">About</a>
+        <a href="../parchi/" aria-current="page">Parchi</a>
+        <a href="../parchi/privacy/">Privacy</a>
       </nav>
     </div>
   </header>
 
-  <main class="wrap">
-    <section class="card">
-      <img src="/assets/parchi-icon.png" alt="Parchi app icon" width="88" height="88">
+  <div class="hero">
+    <div class="wrap hero-grid">
       <div>
-        <h1>Parchi</h1>
-        <p class="lead">Billing made simple for clinics, shops and salons.</p>
-        <p><span class="pill">Android · Coming soon to Google Play</span></p>
+        <span class="pill">Android · Coming soon to Google Play</span>
+        <h1 style="margin-top:14px">Parchi. <span class="soft">Billing made simple.</span></h1>
+        <p class="lead">For clinics, shops and salons that want clean, correct
+          bills without learning accounting software. Add what you sold and
+          share a professional invoice in seconds.</p>
+        <a class="button" href="#features">See what it does</a>
+        <a class="button ghost" href="privacy/">Privacy policy</a>
+      </div>
+      <div class="hero-art app"><img src="../assets/parchi-icon.png" alt="Parchi app icon" width="300" height="300"></div>
+    </div>
+  </div>
+
+  <main class="wrap">
+    <section id="features">
+      <span class="eyebrow">Features</span>
+      <h2>Everything a small business bills with.</h2>
+      <p class="section-lead">From the first invoice to the end-of-month
+        report, all in one app on your phone.</p>
+      <ul class="grid">
+        <li class="tile">
+          <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2z"/><path d="M9 8h6M9 12h6M9 16h4"/></svg></span>
+          <h3>Invoices in seconds</h3>
+          <p>Pick a customer and items, then share a PDF on WhatsApp or print it.</p>
+        </li>
+        <li class="tile">
+          <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 5L5 19"/><circle cx="7" cy="7" r="2.5"/><circle cx="17" cy="17" r="2.5"/></svg></span>
+          <h3>GST done right</h3>
+          <p>CGST and SGST, or IGST for another state, with place of supply, HSN/SAC and Bill of Supply.</p>
+        </li>
+        <li class="tile">
+          <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10h18M16 15h2"/></svg></span>
+          <h3>Payments and dues</h3>
+          <p>Record cash, UPI or card payments and see who still owes you.</p>
+        </li>
+        <li class="tile">
+          <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></span>
+          <h3>Appointments</h3>
+          <p>Book visits, mark them done or no-show, and bill them in one tap.</p>
+        </li>
+        <li class="tile">
+          <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.8-3.5 3.4-5.5 6.5-5.5s5.7 2 6.5 5.5M16 4.5a3.5 3.5 0 0 1 0 7M18 14.8c2 .7 3.2 2.5 3.6 5.2"/></svg></span>
+          <h3>Clients and items</h3>
+          <p>Saved customers with their own IDs, and a price list you can reuse.</p>
+        </li>
+        <li class="tile">
+          <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M10 20V4M16 20v-7M3 20h18"/></svg></span>
+          <h3>Expenses and reports</h3>
+          <p>Income, expenses and profit by month, with Excel / CSV export.</p>
+        </li>
+        <li class="tile">
+          <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10l1.5-5h13L20 10M4 10v10h16V10M4 10h16M10 20v-5h4v5"/></svg></span>
+          <h3>Branches</h3>
+          <p>Several outlets that share clients and items, each with its own invoices.</p>
+        </li>
+        <li class="tile">
+          <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 18a4.5 4.5 0 0 1-.6-9A6 6 0 0 1 18 8.5a4 4 0 0 1-1 9.5z"/><path d="M12 16v-5M9.5 13.5L12 11l2.5 2.5"/></svg></span>
+          <h3>Backups you control</h3>
+          <p>Save a backup to Drive, email or a computer, and restore it any time.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <div class="band">
+        <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 18h2"/></svg></span>
+        <div>
+          <h2>Your data stays on your phone.</h2>
+          <p>No account and no internet needed to bill. Your invoices,
+            customers and reports are stored only on your device, and we never
+            see them. Read the <a href="privacy/">privacy policy</a>.</p>
+        </div>
       </div>
     </section>
 
-    <p>
-      Parchi is for small businesses that want clean, correct bills without
-      learning accounting software. Open it, add what you sold, and share a
-      professional invoice in seconds.
-    </p>
+    <section>
+      <span class="eyebrow">Free, with ads</span>
+      <h2>Ads that stay out of your way.</h2>
+      <p class="section-lead">Parchi is free to use. It shows a small banner
+        on screens you read, never on forms. Now and then, after you share,
+        print or save a bill, a full-screen ad may appear: at most once every
+        10 minutes, and never in your first 3 days.</p>
+    </section>
 
-    <h2>What you can do</h2>
-    <ul class="features">
-      <li><strong>Invoices in seconds</strong>Pick a customer and items, and
-        share a PDF on WhatsApp or print it.</li>
-      <li><strong>GST done right</strong>CGST and SGST, or IGST for another
-        state, with place of supply, HSN/SAC and Bill of Supply.</li>
-      <li><strong>Payments and dues</strong>Record cash, UPI or card
-        payments and see who still owes you.</li>
-      <li><strong>Appointments</strong>Book visits, mark them done or
-        no-show, and bill them in one tap.</li>
-      <li><strong>Clients and items</strong>Saved customers with their own
-        IDs, and a price list you can reuse.</li>
-      <li><strong>Expenses and reports</strong>Income, expenses and profit
-        by month, with Excel / CSV export.</li>
-      <li><strong>Branches</strong>Several outlets that share clients and
-        items, each with its own invoices.</li>
-      <li><strong>Backups you control</strong>Save a backup file to Drive,
-        email or a computer, and restore it any time.</li>
-    </ul>
-
-    <h2>Your data stays on your phone</h2>
-    <p>
-      Parchi works without an account and without the internet. Your
-      invoices, customers and reports are stored only on your device. We
-      never see them. Read the full <a href="/parchi/privacy/">privacy
-      policy</a>.
-    </p>
-
-    <h2>Free, with ads</h2>
-    <p>
-      Parchi is free to use. It shows a small banner on screens you read,
-      never on forms. Now and then, after you share, print or save a bill,
-      a full-screen ad may appear: at most once every 10 minutes, and never
-      in your first 3 days.
-    </p>
-
-    <h2>Help and contact</h2>
-    <p>
-      The app has a built-in Help &amp; guide (More → Help &amp; guide). For
-      anything else, email
-      <a href="mailto:aethoshi.studio@gmail.com">aethoshi.studio@gmail.com</a>.
-    </p>
+    <section>
+      <span class="eyebrow">Help</span>
+      <h2>Stuck on something?</h2>
+      <p class="section-lead">The app has a built-in guide under
+        <em>More → Help &amp; guide</em>. For anything else, email
+        <a href="mailto:aethoshi.studio@gmail.com">aethoshi.studio@gmail.com</a>.</p>
+    </section>
   </main>
 
   <footer class="site">
     <div class="wrap">
-      © 2026 Aethoshi · <a href="/parchi/privacy/">Privacy policy</a>
+      <a class="brand" href="../"><img src="../assets/logo.svg" alt="" width="26" height="26">Aethoshi</a>
+      <nav aria-label="Footer">
+        <a href="../parchi/">Parchi</a>
+        <a href="../parchi/privacy/">Privacy policy</a>
+        <a href="mailto:aethoshi.studio@gmail.com">Contact</a>
+      </nav>
+      <span>© 2026 Aethoshi</span>
     </div>
   </footer>
 </body>

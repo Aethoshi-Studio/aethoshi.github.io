@@ -4,24 +4,43 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Page Not Found</title>
-  <link rel="icon" href="/assets/parchi-icon.png">
-  <link rel="stylesheet" href="/assets/style.css">
+  <meta name="description" content="This page does not exist.">
+  <meta name="theme-color" content="#00716c">
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+  <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
   <header class="site">
     <div class="wrap">
-      <a class="logo" href="/">Aethoshi</a>
-      <nav>
-        <a href="/">Home</a>
-        <a href="/#about">About</a>
-        <a href="/parchi/">Parchi</a>
-        <a href="/parchi/privacy/">Privacy</a>
+      <a class="brand" href="./"><img src="assets/logo.svg" alt="" width="34" height="34">Aethoshi</a>
+      <nav aria-label="Main">
+        <a href="./">Home</a>
+        <a href="./#about">About</a>
+        <a href="parchi/">Parchi</a>
+        <a href="parchi/privacy/">Privacy</a>
       </nav>
     </div>
   </header>
-  <main class="wrap">
-    <h1>Page not found</h1>
-    <p class="lead">That page doesn't exist. <a href="/">Go to the home page</a>.</p>
+
+  <main class="wrap narrow">
+    <section>
+      <span class="eyebrow">404</span>
+      <h1>Page not found</h1>
+      <p class="lead">That page doesn't exist, or it moved.</p>
+      <a class="button" href="https://aethoshi-studio.github.io/">Go to the home page</a>
+    </section>
   </main>
+
+  <footer class="site">
+    <div class="wrap">
+      <a class="brand" href="./"><img src="assets/logo.svg" alt="" width="26" height="26">Aethoshi</a>
+      <nav aria-label="Footer">
+        <a href="parchi/">Parchi</a>
+        <a href="parchi/privacy/">Privacy policy</a>
+        <a href="mailto:aethoshi.studio@gmail.com">Contact</a>
+      </nav>
+      <span>© 2026 Aethoshi</span>
+    </div>
+  </footer>
 </body>
 </html>

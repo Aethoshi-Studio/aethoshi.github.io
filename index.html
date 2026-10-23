@@ -4,83 +4,127 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Aethoshi</title>
-  <meta name="description" content="Aethoshi makes small, simple apps. Our first app is Parchi, a billing app for clinics, shops and salons.">
-  <link rel="icon" href="/assets/parchi-icon.png">
-  <link rel="stylesheet" href="/assets/style.css">
+  <meta name="description" content="Aethoshi is an independent studio making simple, offline apps for small businesses. Our first app is Parchi, a billing app for clinics, shops and salons.">
+  <meta name="theme-color" content="#00716c">
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+  <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
   <header class="site">
     <div class="wrap">
-      <a class="logo" href="/">Aethoshi</a>
-      <nav>
-        <a href="/" aria-current="page">Home</a>
-        <a href="/#about">About</a>
-        <a href="/parchi/">Parchi</a>
-        <a href="/parchi/privacy/">Privacy</a>
+      <a class="brand" href="./"><img src="assets/logo.svg" alt="" width="34" height="34">Aethoshi</a>
+      <nav aria-label="Main">
+        <a href="./" aria-current="page">Home</a>
+        <a href="./#about">About</a>
+        <a href="parchi/">Parchi</a>
+        <a href="parchi/privacy/">Privacy</a>
       </nav>
     </div>
   </header>
 
-  <main class="wrap">
-    <h1>Simple apps for small businesses.</h1>
-    <p class="lead">
-      Aethoshi is an independent studio making apps that do one job well,
-      work offline and keep your data on your own phone.
-    </p>
-
-    <section class="card">
-      <img src="/assets/parchi-icon.png" alt="Parchi app icon" width="88" height="88">
+  <div class="hero">
+    <div class="wrap hero-grid">
       <div>
-        <h2>Parchi</h2>
-        <p>
-          Billing for clinics, shops and salons. Make GST-ready invoices,
-          record payments, book appointments and see what you earned, all
-          on your phone.
-        </p>
-        <p><span class="pill">Coming soon to Google Play</span></p>
-        <a class="button" href="/parchi/">About Parchi</a>
-        <a class="button ghost" href="/parchi/privacy/">Privacy policy</a>
+        <span class="eyebrow">Independent app studio</span>
+        <h1>Simple apps for <span class="soft">small businesses.</span></h1>
+        <p class="lead">Aethoshi makes apps that do one job well, work offline
+          and keep your data on your own phone.</p>
+        <a class="button" href="parchi/">Meet Parchi</a>
+        <a class="button ghost" href="#about">About us</a>
+      </div>
+      <div class="hero-art app"><img src="assets/logo.svg" alt="Aethoshi logo" width="300" height="300"></div>
+    </div>
+  </div>
+
+  <main class="wrap">
+    <section>
+      <span class="eyebrow">Our apps</span>
+      <h2>Made for the counter, not the office.</h2>
+      <p class="section-lead">Tools for the people who run the clinic down
+        the road, the corner shop and the neighbourhood salon.</p>
+      <div class="app-card">
+        <img src="assets/parchi-icon.png" alt="Parchi app icon" width="112" height="112">
+        <div>
+          <span class="pill">Coming soon to Google Play</span>
+          <h3>Parchi</h3>
+          <p>Billing for clinics, shops and salons. Make GST-ready invoices,
+            record payments, book appointments and see what you earned, all
+            on your phone.</p>
+          <a class="button" href="parchi/">About Parchi</a>
+          <a class="button ghost" href="parchi/privacy/">Privacy policy</a>
+        </div>
       </div>
     </section>
 
-    <h2 id="about">About Aethoshi</h2>
-    <p>
-      Aethoshi is a one-person studio building practical apps for people who
-      run small businesses: the clinic down the road, the corner shop, the
-      neighbourhood salon. These are people who need good tools but have no
-      time for complicated software.
-    </p>
+    <section id="about">
+      <span class="eyebrow">About Aethoshi</span>
+      <h2>Good tools, without the complicated software.</h2>
+      <p class="section-lead">Aethoshi is a one-person studio building
+        practical apps for small business owners. They need good tools but
+        have no time to learn complicated software.</p>
 
-    <h3>The name</h3>
-    <p>
-      <em>Aethoshi</em> comes from <em>aether</em>, the old Greek word for
-      the clear, bright air above the clouds. That's how we want our apps to
-      feel: light and clear, and out of your way, so the work gets done and
-      you get back to your customers.
-    </p>
+      <div class="name-box">
+        <img src="assets/logo.svg" alt="" width="96" height="96">
+        <div>
+          <p class="word">Aethoshi</p>
+          <p class="muted">The name comes from <em>aether</em>, the old Greek
+            word for the clear, bright air above the clouds. That's how we want
+            our apps to feel: light and clear, and out of your way, so the work
+            gets done and you get back to your customers. The logo is that
+            sky: a sun rising over the horizon.</p>
+        </div>
+      </div>
+    </section>
 
-    <h3>What we believe</h3>
-    <ul class="features">
-      <li><strong>Simple first</strong>If a feature needs a manual, it isn't
-        finished. Every screen should make sense on first use.</li>
-      <li><strong>Your data is yours</strong>Apps work offline and keep your
-        information on your own phone. No accounts, and nothing uploaded to
-        us.</li>
-      <li><strong>Fair, not free-for-all</strong>Our apps are free with a
-        few ads, kept away from the screens where you work.</li>
-      <li><strong>Built to last</strong>Backups you control and careful
-        testing, so years of records are safe.</li>
-    </ul>
+    <section>
+      <span class="eyebrow">What we believe</span>
+      <h2>Four promises in every app.</h2>
+      <ul class="grid">
+        <li class="tile">
+          <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5L18 18M6 18l2.5-2.5M15.5 8.5L18 6"/></svg></span>
+          <h3>Simple first</h3>
+          <p>If a feature needs a manual, it isn't finished. Every screen should make sense on first use.</p>
+        </li>
+        <li class="tile">
+          <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.4 8-8 9-4.6-1-8-4.5-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></span>
+          <h3>Your data is yours</h3>
+          <p>Apps work offline and keep your information on your own phone. No accounts, and nothing uploaded to us.</p>
+        </li>
+        <li class="tile">
+          <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg></span>
+          <h3>Fair, not free-for-all</h3>
+          <p>Free to use with a few ads, kept away from the screens where you work.</p>
+        </li>
+        <li class="tile">
+          <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 6.5a4 4 0 0 0-5 5L4 17l3 3 5.5-5.5a4 4 0 0 0 5-5l-2.5 2.5-2.5-.5-.5-2.5z"/></svg></span>
+          <h3>Built to last</h3>
+          <p>Backups you control and careful testing, so years of records stay safe.</p>
+        </li>
+      </ul>
+    </section>
 
-    <h2>Contact</h2>
-    <p>
-      Questions, ideas or a problem with an app? Email
-      <a href="mailto:aethoshi.studio@gmail.com">aethoshi.studio@gmail.com</a>.
-    </p>
+    <section>
+      <div class="band">
+        <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span>
+        <div>
+          <h2>Say hello</h2>
+          <p>Questions, ideas or a problem with an app? Email
+            <a href="mailto:aethoshi.studio@gmail.com">aethoshi.studio@gmail.com</a>. We read every message.</p>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="site">
-    <div class="wrap">© 2026 Aethoshi</div>
+    <div class="wrap">
+      <a class="brand" href="./"><img src="assets/logo.svg" alt="" width="26" height="26">Aethoshi</a>
+      <nav aria-label="Footer">
+        <a href="parchi/">Parchi</a>
+        <a href="parchi/privacy/">Privacy policy</a>
+        <a href="mailto:aethoshi.studio@gmail.com">Contact</a>
+      </nav>
+      <span>© 2026 Aethoshi</span>
+    </div>
   </footer>
 </body>
 </html>
